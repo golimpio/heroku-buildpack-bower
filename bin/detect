@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-if [ -f $1/bower.json ]; then
+if [[ -f $1/bower.json || -f $1/.bowerrc ]]; then
   echo "Bower buildpack"
 else
-  echo "No bower.json"
+  echo "No 'bower.json' or '.bowerrc'"
   exit 1
 fi
